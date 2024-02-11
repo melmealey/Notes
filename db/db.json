@@ -16,5 +16,10 @@
         "title": "Grocery shopping",
         "text": "don't forget the strawberries",
         "note_id": "c60e"
+    },
+    {
+        "title": "Taxes",
+        "text": "Collect the things",
+        "note_id": "c3f2"
     }
 ]
