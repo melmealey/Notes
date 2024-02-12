@@ -1,14 +1,14 @@
-const notesRouter = require('express').Router();
+const apiRoutes = require('express').Router();
 const { readFromFile, readAndAppend } =require ('../helpers/fs-utils')
 const uuid = require('../helpers/uuid');
 
 
-notesRouter.get('/', (req, res) => {
+apiRoutes.get('/', (req, res) => {
     console.info(`${req.method} request received for notes`);
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 })
 
-notesRouter.post('/', (req, res) => {
+apiRoutes.post('/', (req, res) => {
     console.info(`${req.method} request received to add a note`);
     console.log(req.body);
   
@@ -28,6 +28,6 @@ notesRouter.post('/', (req, res) => {
     }
 })
 
-module.exports = notesRouter
+module.exports = apiRoutes
 
 

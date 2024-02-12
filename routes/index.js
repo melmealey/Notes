@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
-// Import our files containing our routes
-const notesRouter = require('./notes');
+// Import files containing routes
+const apiRoutes = require('./apiRoutes');
 
-router.use('/notes', notesRouter);
+router.use('/api', apiRoutes);
 
 module.exports = router;
