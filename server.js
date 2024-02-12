@@ -10,10 +10,11 @@ app.use(express.static('public'))
 app.use(express.json())
 
 // Import the feedback router
-const api = require('./routes/index')
+const routes = require('./routes/index')
 
 // Send all the requests that begin with /api to the index.js in the routes folder
-app.use('/api', api)
+app.use(routes)
+
 app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 )
