@@ -53,24 +53,24 @@ const deleteNote = (id) =>
     }
   });
 
-const renderActiveNote = () => {
-  hide(saveNoteBtn);
-  hide(clearBtn);
-
-  if (activeNote.id) {
-    show(newNoteBtn);
-    noteTitle.setAttribute('readonly', true);
-    noteText.setAttribute('readonly', true);
-    noteTitle.value = activeNote.title;
-    noteText.value = activeNote.text;
-  } else {
-    hide(newNoteBtn);
-    noteTitle.removeAttribute('readonly');
-    noteText.removeAttribute('readonly');
-    noteTitle.value = '';
-    noteText.value = '';
-  }
-};
+  const renderActiveNote = () => {
+    hide(saveNoteBtn);
+    hide(clearBtn);
+  
+    if (activeNote.id) {
+      show(newNoteBtn);
+      noteTitle.setAttribute('readonly', true);
+      noteText.setAttribute('readonly', true);
+      noteTitle.value = activeNote.title;
+      noteText.value = activeNote.text;
+    } else {
+      hide(newNoteBtn);
+      noteTitle.removeAttribute('readonly');
+      noteText.removeAttribute('readonly');
+      noteTitle.value = '';
+      noteText.value = '';
+    }
+  };
 
 const handleNoteSave = () => {
   const newNote = {
@@ -114,6 +114,7 @@ const handleNewNoteView = (e) => {
   show(clearBtn);
   renderActiveNote();
 };
+
 
 // Renders the appropriate buttons based on the state of the form
 const handleRenderBtns = () => {
@@ -178,6 +179,9 @@ const renderNoteList = async (notes) => {
 
   if (window.location.pathname === '/notes') {
     noteListItems.forEach((note) => noteList[0].append(note));
+    noteList.forEach((el) => {
+      el.addEventListener('click', handleNoteView);
+    });
   }
 };
 

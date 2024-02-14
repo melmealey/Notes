@@ -15,12 +15,6 @@ const routes = require('./routes/index')
 // Send all the requests that begin with /api to the index.js in the routes folder
 app.use(routes)
 
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-)
-app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/notes.html'))
-)
 
 //Starts the server to begin listening
 app.listen(PORT, () =>
