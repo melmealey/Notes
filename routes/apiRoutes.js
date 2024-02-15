@@ -3,12 +3,12 @@ const { readFromFile, readAndAppend } =require ('../helpers/fs-utils')
 const uuid = require('../helpers/uuid');
 
 
-apiRoutes.get('/', (req, res) => {
-    console.info(`${req.method} request received for notes`);
-    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+apiRoutes.get('/notes', (req, res) => {
+  console.info(`${req.method} request received for notes`);
+  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 })
 
-apiRoutes.post('/', (req, res) => {
+apiRoutes.post('/notes', (req, res) => {
     console.info(`${req.method} request received to add a note`);
     console.log(req.body);
   
