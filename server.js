@@ -1,8 +1,7 @@
 const express = require('express')
 const fs = require('fs')
-const path = require('path')
 
-const PORT = 3333
+const PORT = process.env.PORT || 3333
 
 const app = express()
 
