@@ -1,35 +1,28 @@
 [
-    {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "title": "Things to do...",
-        "text": "Homework"
-    },
+
     {
         "title": "Play games",
         "text": "all day!",
-        "note_id": "ba94"
+        "id": "ba94"
     },
     {
         "title": "Grocery shopping",
         "text": "don't forget the strawberries",
-        "note_id": "c60e"
+        "id": "c60e"
     },
     {
         "title": "Taxes",
         "text": "Collect the things",
-        "note_id": "c3f2"
+        "id": "c3f2"
     },
     {
         "title": "Watch Superbowl",
         "text": "SF 49ers vs KC chiefs",
-        "note_id": "ed73"
+        "id": "ed73"
     },
     {
         "title": "Go to Class",
         "text": "Learn Stuff\n",
-        "note_id": "502b"
+        "id": "502b"
     }
 ]
